@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  html {
+    background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  }
+}
+*,
+*::before,
+*::after {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+body {
+  @apply flex items-center justify-center min-h-screen;
+}
+#root {
+  @apply flex flex-col items-center justify-center w-full pt-5 px-5 py-24 gap-16 sm:gap-32;
+}
+header {
+  @apply flex max-w-[43.625rem] justify-between p-2 sm:p-3 rounded-xl border-4 border-[hsl(217,_16%,_45%)] w-full;
+}
+.score {
+  @apply flex flex-col justify-center gap-1 items-center bg-white rounded-lg w-20 sm:w-40 p-1;
+}
+.score-text {
+  @apply text-[hsl(229,_64%,_46%)] text-lg sm:text-2xl tracking-tighter font-bold;
+}
+.score-number {
+  @apply text-4xl sm:text-6xl font-bold text-[hsl(229,_25%,_31%)];
+}
+.rules-btn {
+  @apply bg-transparent sm:fixed sm:right-7 sm:bottom-7 border-2 text-lg px-10 py-1 border-[hsl(217,_16%,_45%)] rounded-lg text-white hover:bg-[hsl(217,_16%,_45%)] transition;
+}
+.getStarted-container {
+  @apply max-w-[43.625rem] w-full;
+}
+.icon-bg {
+  @apply rounded-full w-28 sm:w-44 h-[7.25rem] sm:h-48 flex justify-center items-center border-b-[0.5rem] sm:border-b-[1rem] cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105;
+}
+.scissors-place {
+  @apply absolute -top-12 sm:-top-20 left-1/2 -translate-x-1/2;
+}
+.paper-place {
+  @apply absolute top-16 -right-10 sm:-right-20;
+}
+.spock-place {
+  @apply absolute top-16 -left-10 sm:-left-20;
+}
+.rock-place {
+  @apply absolute -bottom-8 sm:-bottom-16 right-2 sm:-right-5;
+}
+.lizard-place {
+  @apply absolute -bottom-8 sm:-bottom-16 left-2 sm:-left-5;
+}
+
+.icon-bg-scissors {
+  @apply bg-gradient-to-b from-[hsl(39,89%,49%)] to-[hsl(40,84%,53%)] border-yellow-900;
+}
+.icon-bg-paper {
+  @apply bg-gradient-to-b from-[hsl(230,89%,62%)] to-[hsl(230,89%,65%)] border-blue-900;
+}
+.icon-bg-rock {
+  @apply bg-gradient-to-b from-[hsl(349,71%,52%)] to-[hsl(349,70%,56%)] border-red-900;
+}
+.icon-bg-lizard {
+  @apply bg-gradient-to-b from-[hsl(261,73%,60%)] to-[hsl(261,72%,63%)] border-purple-900;
+}
+.icon-bg-spock {
+  @apply bg-gradient-to-b from-[hsl(189,59%,53%)] to-[hsl(189,58%,57%)] border-teal-600;
+}
+
+.icon {
+  @apply w-[5.25rem] sm:w-[8.5rem] h-[5.25rem] sm:h-[8.5rem] bg-white flex justify-center items-center rounded-full border-t-[.5rem] sm:border-t-[1rem];
+}
+.icon-shadow {
+  @apply w-28 h-28 sm:w-48 sm:h-48 rounded-full bg-black/50;
+}
+.icon > img {
+  @apply transform scale-90 sm:scale-150;
+}
+.close-btn {
+  @apply p-2 rounded-full hover:bg-gray-400/30 transition;
+}
+.game-container {
+  @apply grid gap-2 max-w-5xl w-full text-white mx-auto grid-cols-2;
+}
+.game-container:has(.winner-status) {
+  @apply grid-cols-2 sm:grid-cols-3;
+}
+.choice {
+  @apply flex flex-col items-center justify-center gap-5 sm:gap-10;
+}
+.you {
+  @apply order-1;
+}
+.opponent {
+  @apply order-2 sm:order-3;
+}
+.choice > p {
+  @apply text-lg sm:text-4xl font-bold order-2 sm:order-1 z-10 text-center h-14;
+}
+.choice > div {
+  @apply order-1 sm:order-2;
+}
+.winner-status {
+  @apply flex flex-col justify-center z-10 mx-auto max-w-xs w-full sm:mt-0 mt-5 gap-2 order-3 sm:order-2 text-center col-span-2 sm:col-span-1;
+}
+.winner-text {
+  @apply text-3xl sm:text-6xl font-bold;
+}
+.play-again-btn {
+  @apply text-[hsl(229,_25%,_31%)] bg-white px-4 py-2 rounded-lg text-lg tracking-widest hover:text-red-500 transition;
+}
+.winner-effect {
+  box-shadow: 0 0 20px hsl(217, 16%, 45%), 0 0 40px hsl(217, 16%, 45%),
+    0 0 80px hsl(217, 16%, 45%), 0 0 100px hsl(217, 16%, 45%),
+    0 0 150px hsl(217, 16%, 45%), 0 0 200px hsl(217, 16%, 45%),
+    0 0 250px hsl(217, 16%, 45%);
+}
+.leave-btn {
+  @apply bg-red-300 hover:bg-red-400 transition p-2 rounded-md hover:text-white;
+}
+.play-again-request {
+  @apply absolute top-0 left-0 w-full h-full z-30 flex flex-col justify-center items-center gap-5 bg-black/50;
+}
+.play-again-request > p {
+  @apply text-2xl sm:text-4xl text-white font-bold;
+}

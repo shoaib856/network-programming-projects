@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+html {
+  @apply bg-amber-50 overflow-y-scroll;
+}
+#root {
+  @apply flex flex-col min-h-screen;
+}
