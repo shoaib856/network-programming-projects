@@ -18,14 +18,20 @@
 ### How to play
 
 - join room or create room if you are the first player
+
 ![create room](./screen-shots/create_room.png)
+
 - choose your move
+
 ![start game](./screen-shots/start_game.png)
 
 - wait for the other player to choose his move
+
 ![wait for other player](./screen-shots/wait_for_opponent_move.png)
+
 - see the result
 - play again if you want or leave the room
+
 ![end game](./screen-shots/End_game.png)
 
 ### How to run the project
