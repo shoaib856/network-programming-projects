@@ -59,8 +59,11 @@ but root directory is `chat`
 ### How to use the app
 
 - enter your name
+
 ![record user name](./screen-shots/record_username.png)
+
 - use the app
+
 ![chat preview](./screen-shots/chat.png)
 
 *you can see the other users in the room when you click on the users icon*
